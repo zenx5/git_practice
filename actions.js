@@ -6,5 +6,6 @@ var myInput = document.getElementById('myInput')
 // })
 
 document.querySelector('#get').addEventListener('click', async function() {
-    console.log( await( await fetch('https://jsonplaceholder.typicode.com/todos/1')).json() )
+    const data = await( await fetch('https://jsonplaceholder.typicode.com/todos/1')).json();
+    document.querySelector('#code').innerHTML = JSON.stringify( data )
 })
